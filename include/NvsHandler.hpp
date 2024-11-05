@@ -1,6 +1,7 @@
 #pragma once
 #include "nvs_flash.h"
 #include <map>
+#include <cstring>
 
 namespace DataBridge
 {
@@ -28,7 +29,7 @@ namespace DataBridge
 
             bool store(const char *key, const void *data, size_t data_sz);
             template <typename T>
-            bool store(const char *key, const T &value);
+            bool store(const char *key, const T &value)
             {
                 return store(key, &value, sizeof(T));
             }

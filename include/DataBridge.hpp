@@ -16,8 +16,8 @@ namespace DataBridge
         {
             if (nvs_key == NULL)
             {
-                // return new StorageNone<T>(default_value);
-                return nullptr;
+                return new StorageNone<T>(default_value);
+                // return nullptr;
             }
             else
             {

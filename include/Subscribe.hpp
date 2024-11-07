@@ -1,8 +1,6 @@
 #pragma once
 #include <functional>
 
-// TODO remove inheritance, not creating anything generic, precission is cooler
-
 namespace DataBridge
 {
     template <typename T>

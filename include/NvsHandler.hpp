@@ -13,7 +13,8 @@ namespace DataBridge
             class Block
             {
             public:
-                virtual void commit(NvsHandler *handler, const char *key) const;
+                virtual ~Block() = default;
+                virtual void commit(NvsHandler *handler, const char *key) const = 0;
             };
             NvsHandler(const char *nvs_name);
             ~NvsHandler();

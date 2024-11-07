@@ -70,9 +70,9 @@ namespace DataBridge
         }
 
     protected:
-        void add_data(BaseDataGeneric *data)
+        void add_data(BaseDataGeneric &data)
         {
-            datas.push_back(data);
+            datas.push_back(&data);
         }
     private:
         std::vector<BaseDataGeneric *> datas;

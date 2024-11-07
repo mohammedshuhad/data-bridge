@@ -9,7 +9,8 @@ namespace DataBridge
     class SetData : public BaseData<T>, public SetObject<T>
     {
     public:
-        SetData(SubscribeDelegate<T> *sub_d, StorageDelegate<T> *store_d, SetDelegate<T> *set_d, const char *name) : BaseData<T>(sub_d, store_d, name), set_d(set_d) {}
+        SetData(SubscribeDelegate<T> *sub_d, StorageDelegate<T> *store_d, SetDelegate<T> *set_d, const char *name) : 
+        BaseData<T>(sub_d, store_d, name), set_d(set_d) {}
         SetData(const SetData &) = delete;
         SetData(SetData &&) = default;
 

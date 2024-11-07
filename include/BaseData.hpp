@@ -30,9 +30,9 @@ namespace DataBridge
 
         BaseData(SubscribeDelegate<T> *sub_d, StorageDelegate<T> *store_d, const char *name) : BaseDataGeneric(name), sub_d(sub_d), store_d(store_d)
         {
-            if (!store->load_or_reset(value))
+            if (!store_d->load_or_reset(value))
             {
-                store->set_default(value);
+                store_d->set_default(value);
             }
         }
 
